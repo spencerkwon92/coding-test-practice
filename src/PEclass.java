@@ -2,8 +2,6 @@
 
 public class PEclass {
 
-
-
     public int solution(int n, int[] lost, int[] reserve) {
         int[] students = new int[n];
         for(int i:reserve){
@@ -15,6 +13,7 @@ public class PEclass {
         }
 
         for(int i=0; i<students.length; i++){
+            if(students[i]<0){
                 if(i != students.length-1 && students[i+1]>0){
                     students[i]++;
                     students[i+1]--;
